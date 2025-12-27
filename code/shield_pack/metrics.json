@@ -1,0 +1,72 @@
+{
+  "single_rollout": {
+    "stl_satisfied": true,
+    "rho": 0.04391719579543269
+  },
+  "batch_eval": {
+    "episodes": 20,
+    "stl_satisfaction_rate": 1.0,
+    "rho_mean": 0.0439171957954327
+  },
+  "shielded_eval": {
+    "episodes": 20,
+    "stl_satisfaction_rate": 1.0,
+    "rho_mean": 0.04391719581272076
+  },
+  "conformal_shielded_eval": {
+    "episodes": 20,
+    "stl_satisfaction_rate": 1.0,
+    "rho_mean": 0.043917195825416505
+  },
+  "shift_eval": {
+    "setpoint_450": {
+      "ppo": {
+        "stl_satisfaction_rate": 1.0,
+        "rho_mean": 0.046777623398034825
+      },
+      "conformal": {
+        "stl_satisfaction_rate": 1.0,
+        "rho_mean": 0.04677762343258423
+      }
+    },
+    "setpoint_550": {
+      "ppo": {
+        "stl_satisfaction_rate": 1.0,
+        "rho_mean": 0.04100801232280447
+      },
+      "conformal": {
+        "stl_satisfaction_rate": 1.0,
+        "rho_mean": 0.04100801232245084
+      }
+    }
+  },
+  "stress_eval": {
+    "baseline": {
+      "episodes": 20,
+      "stl_satisfaction_rate": 0.6,
+      "rho_mean": 0.002564988136033059
+    },
+    "shielded": {
+      "episodes": 20,
+      "stl_satisfaction_rate": 0.7,
+      "rho_mean": -0.0113849645723909
+    },
+    "conformal": {
+      "episodes": 20,
+      "stl_satisfaction_rate": 0.9,
+      "rho_mean": 0.004043017811481733
+    },
+    "wrappers": {
+      "obs_sigma": 12.0,
+      "act_delay_steps": 4,
+      "rate_slew": 0.008,
+      "throttle_cap": 0.8,
+      "sp_jump_to": 590.0,
+      "t_jump_s": 20.0
+    },
+    "spec": {
+      "tol": 0.02,
+      "window_s": 5.0
+    }
+  }
+}

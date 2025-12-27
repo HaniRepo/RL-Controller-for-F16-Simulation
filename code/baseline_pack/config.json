@@ -1,0 +1,20 @@
+{
+  "task": "F16 Engine Control (2-var)",
+  "setpoint": 500.0,
+  "dt": 0.1,
+  "horizon_s": 60.0,
+  "seed": 42,
+  "algo": "PPO",
+  "ppo": {
+    "n_steps": 2048,
+    "batch_size": 64,
+    "learning_rate": 0.0003,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2
+  },
+  "obs": "[Vt/sp, pow_norm]",
+  "action": "throttle in [0,1]",
+  "reward_notes": "tracking error + smoothness + progress bonus + in-band bonus",
+  "stl_spec": "G_[50,60] ( |(Vt-sp)/sp| <= 0.05 )  (checked via last-10s window)"
+}

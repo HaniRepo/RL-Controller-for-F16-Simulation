@@ -1,0 +1,66 @@
+{
+  "stl_nominal": {
+    "ppo": {
+      "sat": true,
+      "rho": 0.027260205650703348
+    },
+    "stl": {
+      "sat": true,
+      "rho": 0.014871072115288257
+    },
+    "conformal": {
+      "sat": true,
+      "rho": 0.03894082547456629
+    },
+    "spec": {
+      "tol": 0.05,
+      "window_s": 10.0
+    }
+  },
+  "stl_stress": {
+    "ppo": {
+      "sat": true,
+      "rho": 0.0029990133759995354
+    },
+    "stl": {
+      "sat": true,
+      "rho": 0.005237701184424407
+    },
+    "conformal": {
+      "sat": true,
+      "rho": 0.008940825474566282
+    },
+    "spec": {
+      "tol": 0.02,
+      "window_s": 5.0
+    }
+  },
+  "classical_metrics_stress": {
+    "ppo": {
+      "overshoot_pct": 6.519465299769554,
+      "peak_time_s": 38.20000000000027,
+      "settling_time_s": 54.3000000000005,
+      "steady_state_error": -3.0902211347677166
+    },
+    "stl": {
+      "overshoot_pct": 10.06930705489236,
+      "peak_time_s": 38.20000000000027,
+      "settling_time_s": 51.90000000000047,
+      "steady_state_error": -8.7097563011896
+    },
+    "conformal": {
+      "overshoot_pct": 1.105917452543372,
+      "peak_time_s": 60.100000000000584,
+      "settling_time_s": 60.100000000000584,
+      "steady_state_error": 5.529587262716859
+    }
+  },
+  "stress_stack": {
+    "cap": 0.8,
+    "slew": 0.008,
+    "obs_sigma": 12.0,
+    "delay_steps": 4,
+    "t_jump": 20.0,
+    "sp_new": 590.0
+  }
+}

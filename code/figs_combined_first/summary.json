@@ -1,0 +1,44 @@
+{
+  "nominal_500": {
+    "baseline": {
+      "sat": true,
+      "rho": 0.04321517239612502
+    },
+    "shield": {
+      "sat": true,
+      "rho": 0.043215172595618474
+    },
+    "conformal": {
+      "sat": true,
+      "rho": 0.04321517205791986
+    }
+  },
+  "shift_450": {
+    "baseline": {
+      "sat": true,
+      "rho": 0.04619260281184161
+    },
+    "shield": {
+      "sat": true,
+      "rho": 0.04619260262858777
+    },
+    "conformal": {
+      "sat": true,
+      "rho": 0.04619260281601694
+    }
+  },
+  "shift_550": {
+    "baseline": {
+      "sat": true,
+      "rho": 0.04018260057871843
+    },
+    "shield": {
+      "sat": true,
+      "rho": 0.0401825992164781
+    },
+    "conformal": {
+      "sat": true,
+      "rho": 0.040182600007116105
+    }
+  }
+}

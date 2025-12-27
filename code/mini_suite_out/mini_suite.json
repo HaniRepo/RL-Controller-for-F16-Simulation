@@ -1,0 +1,98 @@
+[
+  {
+    "scenario": "S0 Nominal (5%/10s)",
+    "method": "PPO",
+    "tol": 0.05,
+    "window_s": 10.0,
+    "sat": 1.0,
+    "rho": 0.0439171957954327
+  },
+  {
+    "scenario": "S0 Nominal (5%/10s)",
+    "method": "PPO+STL",
+    "tol": 0.05,
+    "window_s": 10.0,
+    "sat": 1.0,
+    "rho": 0.04391719579487097
+  },
+  {
+    "scenario": "S0 Nominal (5%/10s)",
+    "method": "PPO+CONF",
+    "tol": 0.05,
+    "window_s": 10.0,
+    "sat": 1.0,
+    "rho": 0.04391719579723986
+  },
+  {
+    "scenario": "S1 Mild (4%/8s)",
+    "method": "PPO",
+    "tol": 0.04,
+    "window_s": 8.0,
+    "sat": 1.0,
+    "rho": 0.03143019851887343
+  },
+  {
+    "scenario": "S1 Mild (4%/8s)",
+    "method": "PPO+STL",
+    "tol": 0.04,
+    "window_s": 8.0,
+    "sat": 1.0,
+    "rho": 0.03126073490800607
+  },
+  {
+    "scenario": "S1 Mild (4%/8s)",
+    "method": "PPO+CONF",
+    "tol": 0.04,
+    "window_s": 8.0,
+    "sat": 1.0,
+    "rho": 0.030288580422844123
+  },
+  {
+    "scenario": "S2 Moderate (3%/6s)",
+    "method": "PPO",
+    "tol": 0.03,
+    "window_s": 6.0,
+    "sat": 1.0,
+    "rho": 0.01888725603008513
+  },
+  {
+    "scenario": "S2 Moderate (3%/6s)",
+    "method": "PPO+STL",
+    "tol": 0.03,
+    "window_s": 6.0,
+    "sat": 1.0,
+    "rho": 0.02035219293164261
+  },
+  {
+    "scenario": "S2 Moderate (3%/6s)",
+    "method": "PPO+CONF",
+    "tol": 0.03,
+    "window_s": 6.0,
+    "sat": 1.0,
+    "rho": 0.020845057284392402
+  },
+  {
+    "scenario": "S3 Strong (2%/5s)",
+    "method": "PPO",
+    "tol": 0.02,
+    "window_s": 5.0,
+    "sat": 0.95,
+    "rho": 0.0046463228171370425
+  },
+  {
+    "scenario": "S3 Strong (2%/5s)",
+    "method": "PPO+STL",
+    "tol": 0.02,
+    "window_s": 5.0,
+    "sat": 1.0,
+    "rho": 0.005062525284482173
+  },
+  {
+    "scenario": "S3 Strong (2%/5s)",
+    "method": "PPO+CONF",
+    "tol": 0.02,
+    "window_s": 5.0,
+    "sat": 0.9,
+    "rho": 0.003965277611209643
+  }
+]

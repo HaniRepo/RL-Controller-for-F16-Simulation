@@ -1,0 +1,11 @@
+{
+  "single_rollout": {
+    "stl_satisfied": true,
+    "rho": 0.04321517239612502
+  },
+  "batch_eval": {
+    "episodes": 20,
+    "stl_satisfaction_rate": 1.0,
+    "rho_mean": 0.043215172396125025
+  }
+}
