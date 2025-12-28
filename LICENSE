@@ -1,21 +1,21 @@
-MIT License
+Copyright (c) 2025 Hani Beirami AND M Manjurul Islam
 
-Copyright (c) 2025 Hani Beirami
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This code is provided for the sole purpose of academic review and
+non-commercial research reproducibility in connection with the paper:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+"Conformal Signal Temporal Logic for Robust Reinforcement Learning Control:
+A Case Study"
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+submitted to the IEEE International Conference on Acoustics, Speech and
+Signal Processing (ICASSP).
+
+Permission is granted to reviewers and readers to view, run, and evaluate
+the code for research and review purposes only.
+
+Redistribution, modification, or reuse of this code (or substantial parts
+thereof) in other software, repositories, or publications is NOT permitted
+without explicit written permission from the authors.
+
+This license will be updated upon paper acceptance.
