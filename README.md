@@ -65,7 +65,7 @@ Experiments are configuration-driven, random seeds can be fixed, and trained mod
 
 If you use this code in academic work, please cite:
 
-H. Beirami,  M. Manjurul Islam,
+H. Beirami,  M. M. M. Islam,
 Conformal Signal Temporal Logic for Robust Reinforcement Learning Control: A Case Study, to be appeared in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026.
 
 ## Citation to the case study
