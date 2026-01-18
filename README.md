@@ -189,7 +189,7 @@ If you use this code in academic work, please cite:
 
 H. Beirami, M. M. Manjurul Islam,
 Conformal Signal Temporal Logic for Robust Reinforcement Learning Control: A Case Study,
-to appear in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026.
+IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2026.
 
 ### Citation to the Case Study
 "Verification Challenges in F-16 Ground Collision Avoidance and Other Automated Maneuvers",
