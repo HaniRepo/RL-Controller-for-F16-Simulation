@@ -1,0 +1,34 @@
+[
+  {
+    "scenario": "Nominal",
+    "method": "PPO",
+    "tol": 0.05,
+    "window_s": 10.0,
+    "sat": 1.0,
+    "rho": 0.04391719582151409
+  },
+  {
+    "scenario": "Nominal",
+    "method": "PPO+GENAI",
+    "tol": 0.05,
+    "window_s": 10.0,
+    "sat": 1.0,
+    "rho": 0.042362527480904175
+  },
+  {
+    "scenario": "JumpStress",
+    "method": "PPO",
+    "tol": 0.02,
+    "window_s": 5.0,
+    "sat": 1.0,
+    "rho": 0.008054959362917051
+  },
+  {
+    "scenario": "JumpStress",
+    "method": "PPO+GENAI",
+    "tol": 0.02,
+    "window_s": 5.0,
+    "sat": 0.0,
+    "rho": -0.14250116668240817
+  }
+]

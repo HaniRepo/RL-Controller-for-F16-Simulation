@@ -1,0 +1,4 @@
+Total steps: 600
+Number of changed actions: 2
+Change rate: 0.0033
+Tolerance used: 0.04

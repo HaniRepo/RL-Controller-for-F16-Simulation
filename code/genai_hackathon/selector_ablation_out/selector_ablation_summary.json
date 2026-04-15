@@ -1,0 +1,46 @@
+[
+  {
+    "config": "dir_c3_k1",
+    "mode": "directional",
+    "num_candidates": 3,
+    "K": 1,
+    "spread": 0.06,
+    "sat": 1.0,
+    "rho": 0.034520215223612795,
+    "change_rate": 0.8663333333333334,
+    "avg_predicted_gain": 2.2898237309664913e-05
+  },
+  {
+    "config": "dir_c5_k3",
+    "mode": "directional",
+    "num_candidates": 5,
+    "K": 3,
+    "spread": 0.06,
+    "sat": 1.0,
+    "rho": 0.034520215211707506,
+    "change_rate": 0.865,
+    "avg_predicted_gain": 6.815813965568992e-05
+  },
+  {
+    "config": "dir_c7_k3",
+    "mode": "directional",
+    "num_candidates": 7,
+    "K": 3,
+    "spread": 0.08,
+    "sat": 1.0,
+    "rho": 0.0353012160118798,
+    "change_rate": 0.865,
+    "avg_predicted_gain": 9.087331999003812e-05
+  },
+  {
+    "config": "sym_c5_k3",
+    "mode": "symmetric",
+    "num_candidates": 5,
+    "K": 3,
+    "spread": 0.06,
+    "sat": 1.0,
+    "rho": 0.034520215200735484,
+    "change_rate": 0.868,
+    "avg_predicted_gain": 6.842020320915553e-05
+  }
+]

@@ -1,0 +1,9 @@
+Snapshot at step 195, t=19.5s
+Vt=496.959, sp=500.000, PPO action=0.113
+
+candidate action=0.113, predicted robustness=0.032557
+candidate action=0.143, predicted robustness=0.032604
+candidate action=0.173, predicted robustness=0.032651
+candidate action=0.213, predicted robustness=0.032714
+
+Selected action=0.213, best robustness=0.032714

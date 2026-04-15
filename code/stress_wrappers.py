@@ -46,14 +46,28 @@ class ActionRateLimiter(gym.Wrapper):
         obs, info = self.env.reset(**kwargs)
         self.u_prev = 0.5
         return obs, info
+    
+    def step(self, action):
+        u_cmd = float(np.asarray(action).reshape(-1)[0])
 
+        du = np.clip(u_cmd - self.u_prev, -self.slew, self.slew)
+
+        u_scalar = float(np.clip(self.u_prev + du, 0.0, 1.0))
+
+        u = np.array([u_scalar], dtype=np.float32)
+
+        self.u_prev = u_scalar
+
+        return self.env.step(u)
+    
+    '''
     def step(self, action):
         u_cmd = float(action[0])
         du = np.clip(u_cmd - self.u_prev, -self.slew, self.slew)
         u = np.array([np.clip(self.u_prev + du, 0.0, 1.0)], dtype=np.float32)
         self.u_prev = float(u)
         return self.env.step(u)
-
+   '''
 class SetpointJumpWrapper(gym.Wrapper):
     """At t = t_jump_s, change sp to sp_new mid-episode (task switch)."""
     def __init__(self, env, t_jump_s=30.0, sp_new=560.0):
