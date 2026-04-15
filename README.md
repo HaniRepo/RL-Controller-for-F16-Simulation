@@ -1,38 +1,175 @@
-﻿<p align="center"> <img src="anim3d.gif"/> </p>
+# GenerativeRLController
 
-Note: This is the v2 branch of the code, which is now a python3 project and includes more modularity and general simulation capabilities. For the original benchmark paper version see the v1 branch.
+This repository contains the proof-of-concept implementation for the IEEE IES Generative AI Challenge 2026 Milestone 2 submission:
 
-# AeroBenchVVPython Overview
-This project contains a python version of models and controllers that test automated aircraft maneuvers by performing simulations. The hope is to provide a benchmark to motivate better verification and analysis methods, working beyond models based on Dubins car dynamics, towards the sorts of models used in aerospace engineering. Roughly speaking, the dynamics are nonlinear, have about 10-20 dimensions (continuous state variables), and hybrid in the sense of discontinuous ODEs, but not with jumps in the state. 
+**Generative Safety Augmentation for Industrial Reinforcement Learning Control Using Conformal Temporal Logic**
 
-This is a python port of the original matlab version, which can can see for
-more information: https://github.com/pheidlauf/AeroBenchVV
+The project extends the AeroBench F-16 benchmark with:
 
-# Citation
+* a PPO-based reinforcement learning controller,
+* STL-inspired runtime safety monitoring,
+* conformal prediction for uncertainty-aware safety assessment,
+* a lightweight generative selector for candidate action refinement.
 
-For citation purposes, please use: "Verification Challenges in F-16 Ground Collision Avoidance and Other Automated Maneuvers", P. Heidlauf, A. Collins, M. Bolender, S. Bak, 5th International Workshop on Applied Verification for Continuous and Hybrid Systems (ARCH 2018)
+---
 
-# Required Libraries 
+## Repository Structure
 
-The following Python libraries are required (can be installed using `sudo pip install <library>`):
+```text
+code/
+├── aerobench/                     # Original AeroBench simulator
+├── f16_engine_env.py              # F-16 engine Gymnasium environment
+├── train_Newppo.py                # PPO training script
+├── run_mini_suite.py              # PPO / STL / conformal benchmark suite
+├── stress_wrappers.py             # Noise, delay, rate limit, setpoint jump wrappers
+├── shield.py                      # Simple STL-style safety shield
+├── conformal_shield.py            # Conformal STL runtime shield
+├── stl_monitor.py                 # STL robustness utilities
+├── shield_pack/
+│   └── ppo_f16_engine_baseline.zip # Pretrained PPO baseline
+└── genai_hackathon/
+    ├── run_genai_suite.py         # Lightweight GenAI proof-of-concept test
+    ├── selector_ablation.py       # Candidate selector ablation study
+    ├── plot_full_rollout_genai.py # Full rollout figure generation
+    └── figures/                   # Generated figures
+```
 
-`numpy` - for matrix operations
+---
 
-`scipy` - for simulation / numerical integration (RK45) and trim condition optimization 
+## Environment Setup
 
-`matplotlib` - for animation / plotting (requires `ffmpeg` for .mp4 output or `imagemagick` for .gif)
+Recommended: Python 3.10–3.11 in a clean virtual environment.
 
-`slycot` - for control design (not needed for simulation)
+### 1. Create environment
 
-`control` - for control design (not needed for simulation)
+```bash
+python -m venv .venv
+```
 
-### Animation isuses
-Use matplotlib version 3.1.1 if you get errors like: 
-"art3d.py", line 175, in set_3d_properties
-    zs = np.broadcast_to(zs, xs.shape)
-AttributeError: 'list' object has no attribute 'shape'
+Activate:
 
-### Release Documentation
-Distribution A: Approved for Public Release (88ABW-2020-2188) (changes in this version)
-    
-Distribution A: Approved for Public Release (88ABW-2017-6379) (v1)
+* Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+* Linux / macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+### 2. Install dependencies
+
+```bash
+pip install numpy scipy matplotlib
+pip install gymnasium stable-baselines3 torch
+```
+
+Optional (only for AeroBench extras):
+
+```bash
+pip install control slycot
+```
+
+---
+
+## Quick Start (Recommended for Reviewers)
+
+All commands should be run from inside the `code/` directory.
+
+```bash
+cd code
+```
+
+### A. Reproduce baseline benchmark suite
+
+This compares:
+
+* PPO baseline
+* PPO + STL shield
+* PPO + conformal shield
+
+```bash
+python run_mini_suite.py
+```
+
+Outputs:
+
+* `mini_suite_out/mini_suite.csv`
+* `mini_suite_out/mini_suite.json`
+
+---
+
+### B. Run GenAI proof-of-concept selector
+
+This runs the proposed generative action refinement layer.
+
+```bash
+python genai_hackathon/run_genai_suite.py
+```
+
+Outputs:
+
+* STL satisfaction rate
+* mean robustness
+
+---
+
+### C. Generate full rollout figure used in the paper
+
+```bash
+python genai_hackathon/plot_full_rollout_genai.py
+```
+
+Outputs:
+
+* `genai_hackathon/figures/full_rollout_genai.png`
+
+This figure illustrates:
+
+* airspeed tracking,
+* setpoint change adaptation,
+* STL tolerance band,
+* GenAI runtime interventions.
+
+---
+
+### D. Run selector ablation study
+
+```bash
+python genai_hackathon/selector_ablation.py
+```
+
+Outputs:
+
+* selector change frequency,
+* predicted robustness gains,
+* ablation CSV summaries.
+
+---
+
+## Notes for Reviewers
+
+* A pretrained PPO controller is already included (`shield_pack/ppo_f16_engine_baseline.zip`), so no training is required.
+* The current implementation is a lightweight proof-of-concept designed for Milestone 2 validation.
+* The GenAI module currently uses local candidate action generation with short-horizon conformal robustness evaluation.
+* Future work will extend this to richer trajectory synthesis models.
+
+---
+
+## Paper and Submission
+
+This repository accompanies the IEEE IES Generative AI Challenge 2026 submission.
+
+If you are reviewing the manuscript, the repository provides:
+
+* the F-16 benchmark setup,
+* the PPO baseline,
+* runtime conformal safety shield,
+* the proposed GenAI selector proof-of-concept.
+
+GitHub repository:
+
+[https://github.com/HaniRepo/GenerativeRLController](https://github.com/HaniRepo/GenerativeRLController)
