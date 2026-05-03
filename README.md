@@ -13,7 +13,7 @@ The goal is to study reinforcement learning methods for controlling nonlinear, h
 
 <p align="center">
   <a href="docs/poster.pdf">
-    <img src="docs/poster.png" width="800"/>
+    <img src="docs/poster_new.png" width="800"/>
   </a>
 </p>
 
