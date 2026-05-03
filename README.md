@@ -9,6 +9,19 @@ This repository contains a Reinforcement Learning (RL)–based control framework
 The goal is to study reinforcement learning methods for controlling nonlinear, high-dimensional aerospace systems and to support reproducible benchmarking, robustness analysis, and safety-aware evaluation.
 
 ---
+## 📌 Poster
+
+<p align="center">
+  <a href="docs/poster.pdf">
+    <img src="docs/poster.png" width="800"/>
+  </a>
+</p>
+
+<p align="center">
+  🔗 Click the image to view the full poster (PDF)
+</p>
+
+---
 
 ## Background and Motivation
 
