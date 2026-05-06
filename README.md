@@ -59,9 +59,6 @@ All source code is located under the `code/` directory.
 - **run_mini_suite.py**  
   Lightweight benchmark suite for quick comparison between PPO and shielded variants.
 
-- **run_benchmark_suite.py**  
-  Full benchmark suite with stress testing (noise, delay, setpoint jumps, throttle caps, rate limits) and CSV outputs.
-
 - **stress_wrappers.py**  
   Environment wrappers that inject stress and fault conditions.
 
